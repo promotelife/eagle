@@ -1,0 +1,10 @@
+ 
+build
+bin
+dist
+log
+*test
+*.bat
+run.java
+# Compiled Object files
+*.class
