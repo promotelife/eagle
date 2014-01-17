@@ -6,6 +6,6 @@ log
 runtest
 run.bat
 run.java
-
+filelist
 # Compiled Object files
 *.class
