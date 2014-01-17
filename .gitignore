@@ -1,11 +1,16 @@
  
 build
-bin
 dist
-log
-runtest
-run.bat
-run.java
-filelist
+
+log 
+run.bat  
+Test.java
+TestClass.java
+
+.idea
+.classpath
+.project
+
 # Compiled Object files
 *.class
+bin
