@@ -16,18 +16,30 @@
     <!-- Create the build directory structure used by compile -->
     <mkdir dir="${build}"/>
   </target>
-
   <target name="compile" depends="init"
         description="compile the source " >
     <!-- Compile the java code from ${src} into ${build} -->
-    <javac srcdir="${src}" destdir="${build}" includeAntRuntime="false">
-    
+    <javac srcdir="${src}" destdir="${build}" includeAntRuntime="false" encoding="utf-8" >
       <classpath id="cpath">
         <fileset dir="${jclasspath}"    includes="*.jar"/>
       </classpath>
     </javac>
   </target>
 
+  <target name="run" depends="compile" >
+    <java classname="Eagle" fork="true">
+        <arg value="-h"/>
+        <jvmarg value="-ea"/>
+        <jvmarg value="-server"/>
+        <jvmarg value="-Dlog4j.configuration=file:conf/log4j.xml"/>
+        <classpath>
+            <pathelement path="${build}"/>
+            <fileset dir="${jclasspath}">
+                <include name="*.jar"/>
+            </fileset>
+        </classpath>
+    </java>
+  </target>
   <target name="dist" depends="compile"
         description="generate the distribution" >
     <mkdir dir="${dist}"/>
@@ -36,31 +48,12 @@
 
     </jar>
   </target>
-  
-  <target name="run" depends="dist" >
-     <java classname="Eagle" fork="true">
-        <arg value="-h"/>
-        <jvmarg value="-ea"/>
-        <jvmarg value="-server"/>
-        <jvmarg value="-Dlog4j.configuration=file:conf/log4j.xml"/> 
-          <classpath> 
-            <fileset dir="${dist}"> 
-              <include name="*.jar"/>
-            </fileset>
-            <fileset dir="${jclasspath}"> 
-              <include name="*.jar"/>
-            </fileset>
-            </classpath>
-       </java>
-  </target>
-
 
   <target name="clean"
         description="clean up" >
     <!-- Delete the ${build} and ${dist} directory trees -->
     <delete dir="${build}"/>
   </target>
-  <target name="publish" depends="run,clean">
-    <echo>Finished !</echo>
-  </target>
+
+
 </project>

@@ -4,7 +4,7 @@ import com.eagle.crawler.Crawl;
 import com.eagle.help.Compare;
 import com.eagle.help.Invoke;
 import com.eagle.mysql.*;
-
+import org.apache.log4j.Logger;
 public class Eagle {
 	public static void main(String args[])
 	{
@@ -32,13 +32,19 @@ public class Eagle {
         {
             e.printStackTrace();
         }
+        System.out.println("中文 测 试  ");
 
-
+        Logger log= Logger.getLogger("test");
+/*
 		Mysql my = new Mysql();
 		my.setDatabase("pgenius");
 		my.getData("select * from pgenius.NEWS_MAIN limit 20;");
 		my = null;
-
+*/
 	}
 
+    public void print()
+    {
+        System.out.println("hello");
+    }
 }

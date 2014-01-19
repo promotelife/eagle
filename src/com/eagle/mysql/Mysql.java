@@ -1,6 +1,6 @@
 package com.eagle.mysql;
  
-import java.sql.*;
+import java.sql.*; 
 import org.apache.log4j.Logger;
 
 public class Mysql {

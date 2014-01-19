@@ -259,3 +259,8 @@
 0117 17:43:18,819 com.eagle.mysql.Mysql INFO  	96619	2011-10-15 04:15:40.0	2009-08-16 00:00:00.0	1	00000000000000jd6a	2006-07-10 00:00:00.0	浦发银行中期业绩预告点评				155	null	null		null	null	null	null		542323442	null	null	1	null	null	null	
 0117 17:43:18,820 com.eagle.mysql.Mysql INFO  	96620	2011-10-15 06:20:15.0	2009-08-16 00:00:00.0	1	00000000000000jd6c	2006-07-10 00:00:00.0	Ｇ浦发：中期业绩高于预期				155	null	null		null	null	null	null		542408748	null	null	1	null	null	null	
 0117 17:43:18,846 com.eagle.mysql.Mysql INFO  	96621	2011-10-17 02:27:14.0	2009-08-16 00:00:00.0	1	00000000000000jd6l	2006-07-10 00:00:00.0	G浦发：业绩快报符合预期				155	null	null		null	null	null	null		546091178	null	null	1	null	null	null	
+0118 09:13:56,803 com.eagle.mysql.Mysql ERROR ERROR:Connect DataBase Failed!
+0118 09:16:51,674 com.eagle.mysql.Mysql ERROR ERROR:Connect DataBase Failed!
+0118 09:18:43,075 com.eagle.mysql.Mysql ERROR ERROR:Connect DataBase Failed!
+0118 09:20:21,730 com.eagle.mysql.Mysql ERROR ERROR:Connect DataBase Failed!
+0118 09:21:51,610 com.eagle.mysql.Mysql ERROR ERROR:Connect DataBase Failed!
